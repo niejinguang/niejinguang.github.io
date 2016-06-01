@@ -1,0 +1,31 @@
+
+		*{margin: 0;}
+		/*ul{margin-left: 0}*/
+		ul{list-style: none;}
+		body{background: #dedede;font-family: "微软雅黑"}
+		header{height: 60px;background: #000;width: 100%;}
+		header img{width: 118px;height: 38px;float: left;margin-top: 10px;}
+		header a{color: #fff;text-decoration: none;font-size: 12px;}
+		.wrap{width: 1300px;margin: 0 auto;}
+		header ul{float: right;list-style: none;}
+		header li{float: left;margin-right: 10px;line-height: 60px;}
+
+		article{border: 1px solid #cbcbcb;margin: 20px;background: #fff;padding: 20px;}
+		article h2{margin-bottom: 10px;}
+		article h3{margin-bottom: 10px;}
+		article p{margin: 10px 0;text-indent: 2em;line-height: 30px;}
+		span{font-size: 12px;}
+
+		.flower{width: 340px;height: 270px;border: 1px solid #cecece;margin-bottom: 26px;}
+		.flower span{font-size: 16px;display: inline-block;width: 100%;margin: 10px ;text-align: center;}
+		.flower img{margin: 9px 20px 20px;}
+
+		table{border-collapse: collapse;}
+		table th{background: #000;color: #fff;width: 400px;}
+
+
+		aside{width: 1254px;background: #fff;margin: 20px auto;position: relative;}
+		aside h2{border-left: 3px solid #ccc;padding-left: 20px;margin-left:20px;height: 40px;line-height: 40px;/*position: absolute;top: 20px;left: 20px;*/}
+
+		footer{height: 70px;background: #000;}
+		footer p{color: #fff;line-height: 70px;text-align: center;}

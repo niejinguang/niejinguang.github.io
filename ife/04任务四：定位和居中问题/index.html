@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>任务四：定位和居中问题</title>
+	<style>
+		#wrap{
+			width: 400px;height: 200px;background: #ccc;
+			position: absolute;top: 50%;left: 50%;
+			/*设置定位之后，只是左上角那个点水平垂直居中，要是想让元素居中，还需要在水平方向上向左移动宽度的一半，垂直方向向上移动高度的一半！！*/
+
+			margin-left: -200px;/*水平方向上向左移动宽度的一半*/
+			margin-top: -100px;/*垂直方向向上移动高度的一半*/
+
+			/*怎么不设置固定的这两个值，而是让这两个值随着width和height的变化而动态的变化？？*/
+				/*好像less可以这么做*/
+		}
+		#top,#bootom{width: 50px;height: 50px;background: #fc0;border-radius: 0 0 50px 0;position: absolute;}
+		#top{top: 0;left: 0;}
+		#bootom{bottom: 0;right: 0;border-radius: 50px 0 0 0}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<!--  -->
+		<div id="top"></div>
+		<div id="bootom"></div>
+	</div>
+</body>
+</html>
