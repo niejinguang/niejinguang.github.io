@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>翻页导航</title>
+	<style>
+		div{
+			width: 500px;
+			margin: 20px auto;
+		}
+		a{
+			display: inline-block;
+			width: 26px;
+			height: 26px;
+			border: 1px solid #eee;
+			text-decoration: none;
+			text-align: center;
+			line-height: 26px;
+			color: #000;
+
+		}
+		a:hover{
+			border: 1px solid red;
+			color: red;
+		}
+		#up,#next{
+			width: 60px;
+		}
+		.active{
+			background-color: #eee;
+		}
+		iframe{
+			width: 998px;
+			height: 600px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<a href="" id='up'>上一页</a>
+		<a href="http://www.baidu.com" target='frame' class='active'>1</a>
+		<a href="http://www.taobao.com" target='frame'>2</a>
+		<a href="http://www.tmall.com" target='frame'>3</a>
+		<a href="http://www.163.com" target='frame'>4</a>
+		<a href="http://www.hao123.com" target='frame'>5</a>
+		<a href="http://www.2345.com" target='frame'>6</a>
+		<a href="http://www.tao123.com" target='frame'>7</a>
+		<a href="http://www.zhihu.com" target='frame'>8</a>
+		<a href="" id='next'>下一页</a>
+	</div>
+	<iframe name='frame' src="" frameborder="0"></iframe>
+</body>
+</html>

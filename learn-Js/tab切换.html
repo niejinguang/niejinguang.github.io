@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选项卡</title>
+	<style>
+	*{margin: 0;padding: 0;font-size: 12px;}
+		li{list-style: none;display: inline-block;line-height: 40px;margin: 0 5px;width: 50px;text-align: center;}
+		ul{background-color: #eee;height: 40px;}
+		div{width: 317px;height: 200px;display: none;border: 1px solid #eee;border-top: none;}
+		.active{background-color: #fff;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li class='active'>公告</li>
+		<li>规则</li>
+		<li>论坛</li>
+		<li>安全</li>
+		<li>公益</li>
+	</ul>
+	<div style='display:block'>1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+	<div>5</div>
+	<script>
+		var aLi = document.getElementsByTagName('li');
+		var aDiv = document.getElementsByTagName('div');
+		for(var i = 0;i<aLi.length;i++){
+			aLi[i].index = i;
+			//添加了一个索引，下面要利用索引把li和div建立对应的关系
+
+			aLi[i].onmouseover = function(){
+
+				for(i = 0;i<aLi.length;i++){
+
+					aLi[i].className = '';
+					aDiv[i].style.display = 'none';
+				};
+				//这个for循环是先清除(初始化)，下面再给添加
+
+				this.className = 'active';
+				aDiv[this.index].style.display = "block";
+			}
+		}
+		
+	</script>
+</body>
+</html>

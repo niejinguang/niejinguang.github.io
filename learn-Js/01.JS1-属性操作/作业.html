@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{font-size: 32px;    font-family: Consolas, 'Microsoft Yahei', sans-serif;}
+		span{color:#fff;background-color: red;padding: 8px;font-size: 16px;}
+		div{border: 5px solid #000;width: 100px;height: 100px;}
+		#div1{margin-top: 50px;}
+		#div2{background-color: #fff;
+			border:10px solid gray;width: 300px;height: 200px;display: none;
+			position: absolute;top: 50%;left: 50%; 
+			margin-left: -150px;margin-top: -100px;
+		}
+		table{font-size: 16px;margin: 0 auto;margin-top: 30px;width: 242px;}
+		table td{text-align: center;border: 1px solid #ccc;background-color: #eee;/*padding: 10px;*/}
+		table tr{margin-bottom: 10px;}
+		.no_bg{border: none;background-color: #fff;}
+		
+		td:hover{background-color: #ef9400;}
+		#red{background-color: #9cce00;}
+		#red:hover{background-color: red;}
+		#yellow{background-color: #efbd00;}
+		#yellow:hover{background-color: #ff0;}
+		#blue{background-color: #5a94ef;}
+		#blue:hover{background-color: blue;}
+
+		#div3{width: 114px;border: none;margin: 10px auto;}
+	</style>
+</head>
+<body id="body">
+	<strong>为下面的DIV设置样式：</strong><span id="span">点击设置</span>
+	<!-- <input id="set" type="button" value="点击设置"> -->
+	<div id="div1"></div>
+	<div id="div2">
+		<!-- 背景：<span id="red">红色</span> <span id="blue">蓝色</span> <span id="yellow">黄色</span>
+		高：<span id="height1">50</span> <span id="height2">200</span> <span id="height3">300</span>
+		宽：<span id="weight1">50</span> <span id="weight2">200</span> <span id="weight3">300</span>
+		<span id="reset">重置</span> <span id="confirm">确定</span> -->
+		<table>
+			<tr>
+				<td class="no_bg">请选择背景颜色：</td>
+				<td id="red">红</td>
+				<td id="yellow">黄</td>
+				<td id="blue">蓝</td>
+			</tr>
+			<tr>
+				<td class="no_bg">请选择宽(px)：</td>
+				<td id="weight1">200</td>
+				<td id="weight2">300</td>
+				<td id="weight3">400</td>
+			</tr>
+			<tr>
+				<td class="no_bg">请选择高(px)：</td>
+				<td id="height1">200</td>
+				<td id="height2">300</td>
+				<td id="height3">400</td>
+			</tr>
+		</table>
+		<div id="div3">
+			<span id="reset">重置</span> 
+			<span id="confirm">确定</span> 
+		</div>
+	</div>
+	
+	<script>
+	var div1 = document.getElementById('div1');
+		document.getElementById("span").onclick=function show () {
+			document.getElementById('div2').style.display="block";
+			document.getElementById('body').style.background="rgba(0,0,0,0.3)";
+			
+
+		}
+		
+		//如何封装一个函数，改变颜色的时候就调用这个函数？
+
+
+		// function colors(color){
+		// 	div1.style.background=color;
+		// }
+		// document.getElementById("red").onclick=colors("red");
+		// document.getElementById("blue").onclick=colors("blue");
+		// document.getElementById("yellow").onclick=colors("yellow");
+
+		document.getElementById("red").onclick=function red () {
+			div1.style.backgroundColor="red";
+
+		}
+		document.getElementById("blue").onclick=function blue () {
+			div1.style.background="blue";
+
+		}
+		document.getElementById("yellow").onclick=function yellow () {
+			div1.style.background="yellow";
+
+		}
+
+		document.getElementById("height1").onclick=function height1 () {
+			div1.style.height="50px";
+
+		}
+		document.getElementById("height2").onclick=function height2 () {
+			div1.style.height="200px";
+
+		}
+		document.getElementById("height3").onclick=function height3 () {
+			div1.style.height="300px";
+
+		}
+		document.getElementById("weight1").onclick=function weight1 () {
+			div1.style.width="50px";
+
+		}
+		document.getElementById("weight2").onclick=function weight2 () {
+			div1.style.width="200px";
+
+		}
+		document.getElementById("weight3").onclick=function weight3 () {
+			div1.style.width="300px";
+
+		}
+
+		document.getElementById("reset").onclick=function reset () {
+			div1.style.width="100px";
+			div1.style.height="100px";
+			div1.style.background="#fff";
+		}
+		document.getElementById("confirm").onclick=function confirm () {
+			document.getElementById('div2').style.display="none";
+			document.getElementById('body').style.background="#fff";
+		}
+
+	</script>
+</body>
+</html>
