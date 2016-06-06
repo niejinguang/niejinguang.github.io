@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>天猫导航</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		body{font-family: "Microsoft YaHei",SimSun,sans-serif;}
+		ul{list-style: none;padding-left: 0;}
+		a{text-decoration: none;}
+		#nav_header{
+			width: 100%;
+			height: 36px;
+			background-color: #dd2727;
+			margin-top:60px;
+			position: relative;
+		}
+		#nav_bar{
+			width: 1230px;
+			margin: 0 auto;
+			position: absolute;
+			left: 244px;
+		}
+		.nav_bar_list{}
+		#nav_bar li{
+			float: left;
+			margin: 0 20px;
+			line-height:36px;
+		}
+		#nav_bar li a{color: #fff;}
+		#nav_index{margin-left: 44px;}
+		#nav_pulldown{width: 200px;}
+		#pulldown_title{
+			background-color: #c60a0a;
+			height: 36px;
+			line-height: 36px;
+			color: #fff;
+			text-indent: 40px;
+			font-size: 16px;
+		}
+		.pulldown_list{background-color: #ededed;}
+		.pulldown_list li{
+			height: 31px;
+			line-height: 31px;
+			padding-left:38px;
+		}
+		.pulldown_list li a{
+			font-size: 14px;
+			color: #000;
+		}
+		#nav_index_category{/* 商品详细分类 */
+			width: 900px;
+			height: 464px;
+			background-color: #fafafa;/* #fafafa */
+			position: absolute;
+			top: 36px;
+			left: 244px;
+			font-size:14px;
+			display: none;
+		}
+		.nav_category_l{
+			/* border: 1px solid red; */
+			width: 642px;
+			height: 462px;
+			float: left;
+		}
+		.nav_category_l dl{
+			display: inline-block;
+			float: left;
+		}
+		.nav_category_l dl dt{
+			float: left;
+			padding: 20px;
+		}
+		.nav_category_l dl dd{
+			float: left;
+			margin: 20px 10px;
+		}
+		.nav_category_r{
+			/* border: 1px solid red; */
+			width: 200px;
+			float: right;
+			background-color: #fff;
+			margin: 10px;
+
+		}
+		.nav_category_r img{
+			width: 93px;
+			height: 47px;
+			float: left;
+			margin:2px;
+		}
+		.lihover{
+			background-color: #fff;
+		}
+	</style>
+	<script src="http://www.laobanfengle.com/jquery-2.2.2.js" type="text/javascript" charset="utf-8"></script>
+	
+</head>
+<body>
+	<div id="nav_header">
+		<div id="nav_bar">
+			<ul class="nav_bar_list">
+				<li><a href="">天猫超市</a></li>
+				<li><a href="">天猫国际</a></li>
+				<li><a href="">天猫会员</a></li>
+				<li><a href="">品牌街</a></li>
+				<li><a href="">电器城</a></li>
+				<li><a href="">苗先生</a></li>
+				<li><a href="">医药馆</a></li>
+				<li><a href="">营业厅</a></li>
+				<li><a href="">魅力惠</a></li>
+				<li><a href="">阿里旅行</a></li>
+			</ul>
+		</div>
+		<div id="nav_index">
+			<div id="nav_pulldown">
+				<h2 id="pulldown_title">
+					商品分类
+				</h2>
+				<ul class="pulldown_list">
+					<li>
+						<i class="list_i1"></i> <!-- 这里放的是前面的那个小图标 -->
+						<a href="">手机</a>/
+						<a href="">数码</a>/
+						<a href="">电脑办公</a>
+					</li>
+					<li>
+						<i class="list_i1"></i> 
+						<a href="">女装</a>/
+						<a href="">内衣</a>						
+					</li>
+					<li>
+						<i class="list_i1"></i> 
+						<a href="">男装</a>/
+						<a href="">运动户外</a>
+					</li>
+					<li>
+						<i class="list_i1"></i> 
+						<a href="">女鞋</a>/
+						<a href="">男鞋</a>/
+						<a href="">箱包</a>
+					</li>
+					<li>
+						<i class="list_i1"></i> 
+						<a href="">化妆品</a>/
+						<a href="">个人护理</a>
+					</li>
+					<li>
+						<i class="list_i1"></i> 
+						<a href="">母婴玩具</a>
+					</li>
+					<li>
+						<i class="list_i1"></i> 
+						<a href="">零食</a>/
+						<a href="">进口食品</a>/
+						<a href="">酒</a>
+					</li>
+					<li>
+						<i class="list_i1"></i> 
+						<a href="">大家电</a>/
+						<a href="">生活电器</a>
+					</li>
+					<li>
+						<i class="list_i1"></i> 
+						<a href="">家居建材</a>
+					</li>
+					<li>
+						<i class="list_i1"></i> 
+						<a href="">珠宝饰品</a>/
+						<a href="">腕表眼镜</a>
+					</li>
+					<li>
+						<i class="list_i1"></i> 
+						<a href="">汽车</a>/
+						<a href="">配件</a>/
+						<a href="">用品</a>
+					</li>
+					<li>
+						<i class="list_i1"></i> 
+						<a href="">家纺</a>/
+						<a href="">家饰</a>/
+						<a href="">鲜花</a>
+					</li>
+					<li>
+						<i class="list_i1"></i> 
+						<a href="">医药保健</a>
+					</li>
+					<li>
+						<i class="list_i1"></i> 
+						<a href="">厨具</a>/
+						<a href="">收纳</a>/
+						<a href="">宠物</a>
+					</li>
+					<li>
+						<i class="list_i1"></i> 
+						<a href="">图书音像</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="nav_index_category"><!-- 商品详细分类 -->
+			<div class="nav_category">
+				<div class="nav_category_l">
+					<dl>
+						<dt>热门手机></dt>
+						<dd>小米</dd>
+						<dd>iPhone</dd>
+						<dd>魅族</dd>
+						<dd>荣耀</dd>
+						<dd>乐视</dd>
+						<dd>OPPO</dd>
+						<dd>vivo</dd>
+						<dd>三星</dd>
+						<dd>华为</dd>
+					</dl>
+					<dl>
+						<dt>特色手机></dt>
+						<dd>YunOS</dd>
+						<dd>千元指纹</dd>
+						<dd>双卡双待</dd>
+						<dd>大屏</dd>
+						<dd>自拍</dd>
+						<dd>移动</dd>
+						<dd>联通</dd>
+						<dd>电信</dd>
+						<dd>合约机</dd>
+						
+					</dl>
+					<dl>
+						<dt>手机特惠></dt>
+						<dd>打折秒杀</dd>
+						<dd>新品特卖</dd>
+						<dd>实惠精选</dd>
+					</dl>
+					<dl>
+						<dt>电脑整机></dt>
+						<dd>笔记本</dd>
+						<dd>平板电脑</dd>
+						<dd>台式机</dd>
+						<dd>一体机</dd>
+						<dd>DIY</dd>
+						<dd>游戏本</dd>
+						<dd>iPad</dd>
+						<dd>Suface</dd>
+					</dl>
+					<dl>
+						<dt>智能数码></dt>
+						<dd>智能数码</dd>
+						<dd>智能手表</dd>
+						<dd>智能手环</dd>
+						<dd>手机配件</dd>
+						<dd>飞行智能</dd>
+						<dd>智能摄像</dd>
+					</dl>
+					<dl>
+						<dt>游戏组装</dt>
+						<dd>DIY电脑</dd>
+						<dd>竞技DIY</dd>
+						<dd>显示器</dd>
+						<dd>游戏本</dd>
+						<dd>机械键盘</dd>
+						<dd>XBOX</dd>
+						<dd>游戏手柄</dd>
+					</dl>
+					<dl>
+						<dt>硬件存储></dt>
+						<dd>显示器</dd>
+						<dd>机械键盘</dd>
+						<dd>固体硬盘</dd>
+						<dd>CPU</dd>
+						<dd>显卡</dd>
+						<dd>主板</dd>
+						<dd>高速U盘</dd>
+						<dd>路由器</dd>
+					</dl>
+					<dl>
+						<dt>摄影摄像</dt>
+						<dd>相机</dd>
+						<dd>单反</dd>
+						<dd>单电微单</dd>
+						<dd>摄像机</dd>
+						<dd>自拍神器</dd>
+						<dd>拍立得</dd>
+						<dd>镜头</dd>
+						<dd>自拍杆</dd>
+					</dl>
+				</div>
+				<div class="nav_category_r">
+					<a href=""><img src="https://img.alicdn.com/tps/TB131n8LVXXXXcVXpXXXXXXXXXX-1000-500.jpg_170x120q30.jpg" alt=""></a>
+					<a href=""><img src="https://img.alicdn.com/bao/uploaded/TB1yMKJLVXXXXaIaXXXSutbFXXX.jpg_170x120q30.jpg" alt=""></a>
+					<a href=""><img src="https://img.alicdn.com/bao/uploaded/TB1hirDIVXXXXaZXpXXSutbFXXX.jpg_170x120q30.jpg" alt=""></a>
+					<a href=""><img src="https://img.alicdn.com/bao/uploaded/TB1vBzdJFXXXXaPXpXXSutbFXXX.jpg_170x120q30.jpg" alt=""></a>
+					<a href=""><img src="https://img.alicdn.com/bao/uploaded/TB1TPLrIFXXXXc9XVXXSutbFXXX.jpg_170x120q30.jpg" alt=""></a>
+					<a href=""><img src="http://gtms04.alicdn.com/tps/i4/TB1PhrmHpXXXXX0XXXXXD.cNVXX-400-200.png_170x120q30.jpg" alt=""></a>
+					<a href=""><img src="https://img.alicdn.com/tps/TB1CZYfMXXXXXbCXVXXXXXXXXXX-800-400.jpg_170x120q30.jpg" alt=""></a>
+					<a href=""><img src="https://img.alicdn.com/tps/TB131n8LVXXXXcVXpXXXXXXXXXX-1000-500.jpg_170x120q30.jpg" alt=""></a>
+					<a href=""><img src="https://img.alicdn.com/bao/uploaded/TB1yMKJLVXXXXaIaXXXSutbFXXX.jpg_170x120q30.jpg" alt=""></a>
+					<a href=""><img src="https://img.alicdn.com/bao/uploaded/TB1hirDIVXXXXaZXpXXSutbFXXX.jpg_170x120q30.jpg" alt=""></a>
+					<a href=""><img src="https://img.alicdn.com/bao/uploaded/TB1vBzdJFXXXXaPXpXXSutbFXXX.jpg_170x120q30.jpg" alt=""></a>
+					<a href=""><img src="https://img.alicdn.com/bao/uploaded/TB1TPLrIFXXXXc9XVXXSutbFXXX.jpg_170x120q30.jpg" alt=""></a>
+					<a href=""><img src="http://gtms04.alicdn.com/tps/i4/TB1PhrmHpXXXXX0XXXXXD.cNVXX-400-200.png_170x120q30.jpg" alt=""></a>
+					<a href=""><img src="https://img.alicdn.com/tps/TB1CZYfMXXXXXbCXVXXXXXXXXXX-800-400.jpg_170x120q30.jpg" alt=""></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		
+			$('.pulldown_list li').mouseover(function(){
+					$(this).addClass('lihover');
+					$('#nav_index_category').css('display','block');
+					// 怎么把.pulldown_list li 和 #nav_index_category 一一对应起来？
+				});
+			$('.pulldown_list li').mouseout(function(){
+					$(this).removeClass('lihover');
+					$('#nav_index_category').css('display','none');
+					// 还有一个问题：鼠标离开li，#nav_index_category也立即消失，不是想要的结果，怎么处理？
+				});
+
+		
+	</script>
+</body>
+</html>
