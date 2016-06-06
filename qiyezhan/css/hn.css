@@ -1,0 +1,176 @@
+
+body{
+	font-family:"微软雅黑"; font-size:12px;margin:0px auto;
+}
+
+#header{height:66px; width:1000px;margin:0 auto;margin-top:30px;}
+#h_left{
+	float:left;
+}
+#h_right{
+	float:right;
+	font-size:16px;
+	margin-top:10px;
+}
+
+#h_right span{
+	color:#c60500;
+	font-size:1.5em;
+
+}
+
+/*导航开始*/
+
+#nav{
+	height:50px;
+	width:100&;
+	margin-top:10px;
+	background-color:#fafafa;
+	margin-top:1px solid #eee;
+	}
+#content{width:1000px;margin:0 auto;}
+#nav ul{margin:0 auto;width:1000px;}
+#nav ul li{
+	list-style-type:none;
+	float:left;
+	margin-top:10px;
+	margin-left:6px;
+	width:100px;
+	font-size:1.5em;
+	
+	}
+
+#nav ul li a{
+	display:block;
+	text-decoration:none;
+	color:#333;
+	text-align:center;
+	height:30px;
+	line-height:30px;
+}
+#nav ul li a:hover,#nav ul li.cur a{
+	background:#06F;
+	color:#fff;
+	border-radius:10px;
+}
+
+/*轮播图开始
+
+.flexslider { position: relative; height:455px; overflow: hidden; background: url(../images/loading.gif) 50% no-repeat;}
+.slides { position: relative; z-index: 1;}
+.slides li { height:455px;}
+.flex-control-nav { position: absolute; bottom:20px; z-index: 2; width: 100%; text-align: center;}
+.flex-control-nav li { display: inline-block; width: 14px; height: 14px; margin: 0 5px; *display: inline; zoom: 1;}
+.flex-control-nav a { display: inline-block; width: 14px; height: 14px; line-height: 40px; overflow: hidden; background: url(../images/dot.png) right 0 no-repeat; cursor: pointer;}
+.flex-control-nav .flex-active { background-position: 0 0;}
+
+*/
+
+#banner{
+	margin: 0px auto;
+	}
+
+/*机械检测项目*/
+#project{
+	height: 478px;
+	background-color: rgb(245,245,245);
+	margin: 10px 0 ;
+
+}
+
+h2{
+	text-align: center;
+	font-size: 18px;
+	padding: 25px 0;	 
+}
+
+.jiance{
+	width: 360px;
+	height: 120px;
+	margin-left: 175px;
+	margin-bottom: 40px;
+	float: left;
+}
+
+.jiance img{
+	float: left;
+	margin-right: 10px;
+}
+.jiance h3{
+	font-size: 14px;
+	line-height: 40px;
+}
+.jiance a{
+	color: black;
+}
+.jiance a:hover{
+	color: red;
+	text-decoration: underline;
+}
+
+#project #more{
+	clear: both;
+	border: 1px solid gray;
+	width: 137px;
+	height: 37px;
+	text-align: center;
+	line-height: 37px;
+	margin: 0 auto;
+	border-radius: 12px;
+}
+#project #more a{
+
+	color: #000;
+	font-size: 14px;
+}
+#project #more a:hover{
+	display: block;
+	color: white;
+	background-color: #06F;
+	border-radius: 10px;
+}
+
+/*行业动态  法规文件 开始*/
+.info{
+	height: 455px;
+	background-color: white;
+	margin: 0 auto;
+}
+.left,.right,.center{
+	width: 320px;
+	height: 375px;
+	float: left;
+	margin-right: 20px;
+	margin-top: 40px;
+
+}
+.center{
+	width: 380px;
+}
+.left{
+	margin-left: 175px;
+}
+.left ul{
+	margin-top: 20px;
+	background: url(./images/li.jpg);
+}
+.left ul li,.center ul li,.right ul li{
+	background: url(./images/li.jpg);
+	background-repeat:  no-repeat;
+	margin-left: 15px;
+	height: 30px;
+}
+#footer{
+	height: 200px;
+	background-color: #14549f;
+	
+}
+#footer_content{
+	width: 1000px;
+	margin: 0 auto;
+}
+.f_logo,adress{
+	float: left;
+	margin-top: 40px;
+	margin-right: 100px;
+}
