@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="txt" placeholder="请输入想要生成的按钮数量" />
+	<input type="button" value="按钮生成" id="btn">
+	<script>
+		var oTxt = document.getElementById('txt');
+		var oBtn = document.getElementById('btn');
+		// var num = parseInt(oTxt.value);
+/*	第一个实现版本	
+		oBtn.onclick = function(){
+			for(var i=1;i<=parseInt(oTxt.value);i++){
+				document.body.innerHTML += "<input type='button' value='按钮'/>" 
+				//这样写的生成999个用时4秒,
+				//9999用时~~~，浏览器挂了/(ㄒoㄒ)/~~
+
+				
+			}	
+		}
+
+*/
+//优化后，性能大幅提升
+/*	*/	
+		var oTxt = document.getElementById('txt');
+		var oBtn = document.getElementById('btn');
+		// var num = parseInt(oTxt.value);
+		var str="";
+		oBtn.onclick = function(){
+			
+			for(var i=1;i<=parseInt(oTxt.value);i++){
+				str += "<input type='button' value='按钮'/>"
+			}
+			document.body.innerHTML = str;
+			//这样写的生成999个用时1秒，几乎是瞬间完成的
+			//这样写的生成9999个用时1秒，几乎是瞬间完成的
+			//这样写的生成99999个用时20秒
+		}
+//第一个版本在运行时每一次都需要找到 body 并向里面添加代码：<input type='button' value='按钮'/>。输入9999，就需要9999次的找对象，写9999次的代码
+//而优化后的版本，把每次运算生成的按钮代码都先放在了一个字符串里，也就是str里存放了9999个 <input type='button' value='按钮'/>，最后再一次性的放到body里。性能就提升啦
+
+// 最后有一个问题：怎么让点击之后开始计时，生成之后计时结束，并显示所用时间？？？		
+	</script>
+</body>
+</html>

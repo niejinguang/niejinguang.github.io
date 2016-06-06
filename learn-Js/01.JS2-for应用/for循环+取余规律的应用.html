@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{width: 300px;height: 300px;background-color: #eee;}
+		li{list-style: none;display: inline-block;width: 20px;height: 20px;margin: 10px;padding :10px;text-align: center;}
+	</style>
+</head>
+<body>
+	
+	<input type="button" id="btn" value="10个li生成器"/>
+	<script>
+		// for(var i = 0;i<1000;i++){
+		// 	document.body.innerHTML += "<input type='button' value='按钮'/>"
+		// }
+
+		
+		var oBtn = document.getElementById('btn');
+		var arrColor = ["green","red","pink","yellow"]
+		var oLis = document.getElementsByTagName('li');
+		oBtn.onclick = function(){
+			for(var i = 0;i<10;i++){
+
+				document.body.innerHTML += "<li>"+i+"</li>";
+				
+			}
+			//alert(arrColor.length)//名字设置成arrcolor就出错，就因为没有驼峰写法？
+			for(i=0;i<10;i++){
+				//alert(i%4)//满足需要~\(≧▽≦)/~啦啦啦 循环得到0,1,2,3
+				oLis[i].style.backgroundColor = arrColor[i%4];
+			}
+//╮(╯▽╰)╭浪费这么多时间，没想到一个取余解决问题了！！
+//				
+			// alert(i)
+				// for(var n=0;n<4;n++){
+				// 	alert(n)
+				// 	oLis[i].style.backgroundColor = arrcolor[n];
+				// }
+
+				// var n = i;
+
+				// if(n==4){
+				// 	n=0;
+				// };
+				// alert(n);
+				// oLis[i].style.backgroundColor = arrcolor[n];
+				
+			
+			// var arrcolor = ["green","red","pink","yellow"]
+			// var oLis = document.getElementsByTagName('li');
+			// oLis[0].style.backgroundColor = arrcolor[0];
+			// oLis[1].style.backgroundColor = arrcolor[1];
+			// oLis[2].style.backgroundColor = arrcolor[2];
+			// oLis[3].style.backgroundColor = arrcolor[3];
+			// oLis[4].style.backgroundColor = arrcolor[0];
+			// oLis[5].style.backgroundColor = arrcolor[1];
+			// oLis[6].style.backgroundColor = arrcolor[2];
+			// oLis[7].style.backgroundColor = arrcolor[3];
+			// oLis[8].style.backgroundColor = arrcolor[0];
+			// oLis[9].style.backgroundColor = arrcolor[1];
+//这一段代码怎么优化？？！！
+
+
+		}
+	</script>
+</body>
+</html>

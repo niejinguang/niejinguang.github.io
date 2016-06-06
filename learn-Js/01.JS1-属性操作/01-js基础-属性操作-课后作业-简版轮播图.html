@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>01-js基础-属性操作-课后作业-简版轮播图</title>
+	<style>
+		#content{width: 520px;height: 280px;border: 5px solid #eee;position: relative;margin: 50px auto;}
+		#sp1,#sp2{position: absolute;background: #000;color: #fff;opacity: 0.4;width: 520px;text-align: center;display: none;}
+		#sp1{top: 0;}
+		#sp2{bottom: 0;}
+		#pre,#next{position: absolute;text-decoration: none;top: 50%;display: none;width: 24px;height: 36px;background: #ddd;line-height: 36px;text-align: center;font-weight: bold;}
+		#pre{left: 0;}
+		#next{right: 0;}
+		#imgs{width: 520px;height: 280px;/*position: absolute;z-index: -10;*/}
+	</style>
+</head>
+<body>
+	<div id="content">
+		<span id="sp1"></span>
+		<span id="sp2">图片介绍</span>
+		<a href="javascript:;" id="pre"><</a>
+		<a href="javascript:;" id="next">></a>
+		<img src="" alt="" id="imgs" />
+	</div>
+	<script>
+		var oContent = document.getElementById('content');
+		var oSp1 = document.getElementById('sp1');
+		var oSp2 = document.getElementById('sp2');
+		var oPre = document.getElementById('pre');
+		var oNext = document.getElementById('next');
+		var oImgs = document.getElementById('imgs');
+		var arrImgs = ['images/1.jpg','images/2.jpg','images/3.jpg','images/4.jpg','images/5.jpg'];
+		var arrSp2 = ['图片1','图片2','图片3','图片4','图片5'];
+		var num = 0;
+
+		oContent.onmouseover = function(){
+			oSp1.style.display="block";
+			oSp2.style.display="block";
+			oNext.style.display="block";
+			oPre.style.display="block";
+		}
+		//若是用oImg.onmouseout会有一个bug
+		oContent.onmouseout = function(){
+			oSp1.style.display="none";
+			oSp2.style.display="none";
+			oNext.style.display="none";
+			oPre.style.display="none";
+		}
+		//初始化
+		function tab(){
+			oSp1.innerHTML = num+1+'/'+arrImgs.length;
+			oSp2.innerHTML = arrSp2[num];
+			oImgs.src = arrImgs[num];
+
+		}
+		tab();
+		//上一张图片
+		oPre.onclick = function (){
+			// alert(1);
+			num--;//num--放在这里才能点击一下就上一张图片
+			if(num == -1){
+				num=arrImgs.length-1;
+			}
+			tab();
+			// oImgs.src = arrImgs[num];
+			// oSp1.innerHTML = num+1+'/'+arrImgs.length;
+			// oSp2.innerHTML = arrSp2[num];
+			// num--;放在这里，第一次点击没有反应
+		}
+		
+		 
+		//下一张图片(版本1：注意和版本2的区别)
+		// oNext.onclick = function (){
+		// 	// alert(1);
+		// 	if(num == arrImgs.length-1){
+		// 		num=-1;
+		// 	}
+		// 	num++;
+		// 	oImgs.src = arrImgs[num];
+		// 	oSp1.innerHTML = num+1+'/'+arrImgs.length;
+		// 	oSp2.innerHTML = arrSp2[num];
+		// };
+
+		//下一张图片（版本2：）  与版本1相比除了顺序和判断条件的不同，版本2会不会性能好点？？
+		oNext.onclick = function (){
+			// alert(1);
+			num++;
+			if(num == arrImgs.length){
+				num=0;
+			}
+			tab();
+			// oImgs.src = arrImgs[num];
+			// oSp1.innerHTML = num+1+'/'+arrImgs.length;
+			// oSp2.innerHTML = arrSp2[num];
+		};
+		
+//怎么让它像网站上的一样自动切换呢？？		
+		setInterval(function(){
+			num++;
+			
+			if(num == arrImgs.length){
+				num=0;
+			};
+			tab()
+
+		},2000)
+
+//下面的那一排小圆圈怎么设置？？
+
+		
+		
+	</script>
+</body>
+</html>

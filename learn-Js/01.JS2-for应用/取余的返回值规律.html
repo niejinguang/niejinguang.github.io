@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>模运算</title>
+	<style>
+		#main{width: 400px;margin: 0 auto;}
+		#div1{width: 300px;background: #eee;margin-top: 20px;padding: 20px;line-height: 26px;}
+		span{color: red;font-weight: bold;}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<p>关于取余运算:0——100的整数对n取余，n自定义</p>
+		<input type="text" id="txt" placeholder="在此输入n的值"/>
+		<input type="button" id="btn" value="点击输出 (0——100)%n 的值">
+		<div id="div1">
+			通过此运算可以发现一个规律：
+			模运算的结果是[0-(n-1)]之间的整数，并且是循环出现的。
+			<span>也就是说取余可以重复得到一组数字！</span>
+			这里这个<a href="for循环+取余的应用.html" target="_blank">demo</a>之前试了其他方式，都不行（是我不会），用取余解决啦(*^__^*) …
+		</div>
+	</div>
+	<script>
+		var oTxt = document.getElementById('txt');
+		var oDiv = document.getElementById('div1');
+		var oBtn = document.getElementById('btn');
+		var str = "";
+		oBtn.onclick=function(){
+			//alert(typeof(oTxt.value))//字符串类型！！
+			
+			str = "";
+			for(var i=0;i<=100;i++){
+				str += i+'%'+(oTxt.value)+'的值是：'+ i%(oTxt.value)+"<br/>";
+			}
+			oDiv.innerHTML = str;
+			oTxt.value = null;
+		}
+
+//这个东西有许多问题：
+/*
+* 怎么实现不刷新页面就可以多次对不同的n运算，并且页面中只显示当前n值的运算？先清空，再写入
+*
+*没有对输入的东西进行验证(是不是数字啦，什么样子的数字啦，等等之类的)
+*
+*
+*
+*
+*
+*/
+	</script>
+</body>
+</html>
